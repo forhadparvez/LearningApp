@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using LearningApp.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace LearningApp.Data
@@ -9,5 +10,7 @@ namespace LearningApp.Data
             : base(options)
         {
         }
+
+        public DbSet<Department> Departments { get; set; }
     }
 }
